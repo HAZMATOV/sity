@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="ООО «Константа» — премиальный корпоративный сайт управляющей компании." />
+    <title>Константа Business</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+    <style>
+      body.variant-premium { background: #eeeae2; color: #24211d; font-family: Georgia, 'Times New Roman', serif; }
+      body.variant-premium .site-header { background: #eeeae2; border-bottom: 1px solid #bdb3a3; }
+      body.variant-premium .brand-name, body.variant-premium .main-nav a { color: #24211d; }
+      body.variant-premium .brand small, body.variant-premium .main-nav a { font-family: Inter, sans-serif; color: #6e685f; }
+      body.variant-premium .main-nav a:hover { color: #9b6334; }
+      body.variant-premium .brand-mark { border-radius: 0; background: #24211d; color: #e7bd73; }
+      body.variant-premium .hero { background: #24211d; color: #fff8ea; position: relative; overflow: hidden; padding: 104px 0 116px; }
+      body.variant-premium .hero::before { content: 'CONSTANTA'; position: absolute; right: -0.06em; top: 0.1em; color: rgba(231,189,115,0.1); font-size: clamp(6rem, 16vw, 15rem); line-height: 0.8; white-space: nowrap; }
+      body.variant-premium .hero::after { content: ''; position: absolute; width: 44vw; height: 44vw; max-width: 620px; max-height: 620px; right: -13%; bottom: -45%; border: 1px solid rgba(231,189,115,0.65); border-radius: 50%; box-shadow: 0 0 0 28px rgba(231,189,115,0.09), 0 0 0 80px rgba(231,189,115,0.06); }
+      body.variant-premium .eyebrow { color: #e7bd73; font-family: Inter, sans-serif; }
+      body.variant-premium .hero-copy h1 { max-width: 790px; font-size: clamp(2.7rem, 5.5vw, 6rem); font-weight: 400; letter-spacing: -0.04em; line-height: 0.98; }
+      body.variant-premium .hero-copy p { color: #d9d0c2; font-family: Inter, sans-serif; max-width: 560px; }
+      body.variant-premium .hero-panel { position: relative; z-index: 2; }
+      body.variant-premium .hero-card { background: #e7bd73; color: #24211d; border: 0; border-radius: 0; box-shadow: 22px 22px 0 #9b6334; transform: rotate(-4deg); }
+      body.variant-premium .hero-card h3, body.variant-premium .hero-card li { color: #24211d; }
+      body.variant-premium .hero-card li::before { color: #24211d; }
+      body.variant-premium .btn { border-radius: 0; font-family: Inter, sans-serif; text-transform: uppercase; font-size: 0.76rem; letter-spacing: 0.06em; }
+      body.variant-premium .btn-primary { background: #e7bd73; color: #24211d; }
+      body.variant-premium .btn-secondary { background: transparent; border-color: #e7bd73; color: #fff8ea; }
+      body.variant-premium .hero-stats li { background: transparent; border: 0; border-top: 1px solid #71695f; border-radius: 0; padding-left: 0; }
+      body.variant-premium .hero-stats strong { color: #e7bd73; }
+      body.variant-premium .hero-stats span { color: #d9d0c2; font-family: Inter, sans-serif; }
+      body.variant-premium .section { background: #eeeae2; }
+      body.variant-premium .section.muted { background: #ded5c7; }
+      body.variant-premium .section-heading h2 { color: #24211d; font-weight: 400; letter-spacing: -0.03em; }
+      body.variant-premium .card, body.variant-premium .service-card, body.variant-premium .object-card, body.variant-premium .advantage, body.variant-premium .text-block { background: #f8f4ed; border: 1px solid #bdb3a3; border-radius: 0; box-shadow: 9px 9px 0 rgba(36,33,29,0.13); }
+      body.variant-premium .card p, body.variant-premium .service-card p, body.variant-premium .object-card p, body.variant-premium .advantage, body.variant-premium .text-block p { color: #5f5a52; font-family: Inter, sans-serif; }
+      body.variant-premium .service-card h3, body.variant-premium .object-card h3 { color: #24211d; }
+      body.variant-premium .site-footer { background: #24211d; border-top: 0; color: #fff8ea; }
+      body.variant-premium .site-footer strong { color: #e7bd73; }
+      body.variant-premium .site-footer p { color: #d9d0c2; font-family: Inter, sans-serif; }
+    </style>
+  </head>
+  <body class="variant-premium">
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <div class="brand">
+          <div class="brand-mark">К</div>
+          <div>
+            <span class="brand-name">ООО «Константа»</span>
+            <small>Управляющая компания</small>
+          </div>
+        </div>
+        <nav class="main-nav">
+          <a href="/premium">Главная</a>
+          <a href="/about">О компании</a>
+          <a href="/services">Услуги</a>
+          <a href="/objects">Объекты</a>
+          <a href="/contacts">Контакты</a>
+          <a href="/admin">Админ</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-inner">
+          <div class="hero-copy">
+            <span class="eyebrow">Business operations / 14 лет опыта</span>
+            <h1>Управляем недвижимостью как бизнесом</h1>
+            <p>Константа берёт на себя эксплуатацию, контроль подрядчиков и ежедневную заботу о домах, чтобы собственники видели результат в цифрах и порядке.</p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="/services">Наши услуги</a>
+              <a class="btn btn-secondary" href="/contacts">Связаться с нами</a>
+            </div>
+            <ul class="hero-stats">
+              <li><strong>14 лет</strong><span>на рынке</span></li>
+              <li><strong>9</strong><span>объектов</span></li>
+              <li><strong>100%</strong><span>ответственность</span></li>
+            </ul>
+          </div>
+          <div class="hero-panel">
+            <div class="hero-card">
+              <h3>Контур ответственности</h3>
+              <ul>
+                <li>Управление МКД</li>
+                <li>Эксплуатация объектов</li>
+                <li>Электрика и сантехника</li>
+                <li>Поддержка собственников</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-heading">
+            <span class="eyebrow">О компании</span>
+            <h2>Порядок в процессах. Понятный результат.</h2>
+          </div>
+          <div class="info-grid">
+            <div class="card">
+              <p>ООО «Константа» работает на рынке 14 лет и входит в группу управляющих компаний, включающую ООО «Бизнес плюс» и ООО «Респектабельность К».</p>
+            </div>
+            <div class="card">
+              <p>Мы обеспечиваем стабильное содержание объектов, контроль качества работ и комфортное взаимодействие с собственниками.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section muted">
+        <div class="container">
+          <div class="section-heading">
+            <span class="eyebrow">Услуги</span>
+            <h2>Комплексная эксплуатация и управление</h2>
+          </div>
+          <div class="services-grid" id="servicesGrid"></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-heading">
+            <span class="eyebrow">Объекты</span>
+            <h2>Наши управляемые объекты</h2>
+          </div>
+          <div class="object-grid" id="objectGrid"></div>
+        </div>
+      </section>
+
+      <section class="section muted">
+        <div class="container">
+          <div class="section-heading">
+            <span class="eyebrow">Преимущества</span>
+            <h2>Почему выбирают именно нас</h2>
+          </div>
+          <div class="advantages-list" id="advantagesList"></div>
+        </div>
+      </section>
+
+      <section class="section gallery-section">
+        <div class="container">
+          <div class="section-heading">
+            <span class="eyebrow">Галерея</span>
+            <h2>Наши объекты и работа команды</h2>
+          </div>
+          <div class="gallery-grid" id="galleryGrid"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>
+          <strong>ООО «Константа»</strong>
+          <p>Управляющая компания</p>
+        </div>
+        <div>
+          <p>Телефон: +7 (495) 000-00-00</p>
+          <p>E-mail: info@konstanta.ru</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/main.js"></script>
+  </body>
+</html>

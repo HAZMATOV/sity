@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Контакты ООО «Константа»: телефон, E-mail, адрес офиса и карта объектов." />
+    <title>Контакты | ООО «Константа»</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <div class="brand">
+          <div class="brand-mark">К</div>
+          <div>
+            <span class="brand-name">ООО «Константа»</span>
+            <small>Управляющая компания</small>
+          </div>
+        </div>
+        <nav class="main-nav">
+          <a href="/">Главная</a>
+          <a href="/about">О компании</a>
+          <a href="/services">Услуги</a>
+          <a href="/objects">Объекты</a>
+          <a href="/contacts">Контакты</a>
+          <a href="/admin">Админ</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div class="container narrow">
+          <span class="eyebrow">Контакты</span>
+          <h1>Свяжитесь с нами</h1>
+        </div>
+      </section>
+
+      <section class="section form-section">
+        <div class="container contact-layout">
+          <div class="contact-info card">
+            <h3>ООО «Константа»</h3>
+            <p><strong>Телефон:</strong> <a data-contact-phone href="tel:+74950000000">+7 (495) 000-00-00</a></p>
+            <p><strong>E-mail:</strong> <a data-contact-email href="mailto:info@konstanta.ru">info@konstanta.ru</a></p>
+            <p><strong>Адрес офиса:</strong> <span data-contact-address>Москва, ул. Московская, д. 12, офис 401</span></p>
+            <p><strong>Режим работы:</strong> <span data-contact-hours>Пн–Пт: 09:00–18:00</span></p>
+          </div>
+
+          <div class="card phone-contact-card">
+            <span class="eyebrow">Быстрая связь</span>
+            <h2>Позвоните нам</h2>
+            <p>Ответим на вопросы по управлению домами, эксплуатации и объектам.</p>
+            <a class="phone-number" data-contact-phone href="tel:+74950000000">+7 (495) 000-00-00</a>
+            <a class="btn btn-primary" data-contact-phone href="tel:+74950000000">Позвонить</a>
+            <a class="email-link" data-contact-email href="mailto:info@konstanta.ru">info@konstanta.ru</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div id="map" class="map-block" aria-label="Карта объектов"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>
+          <strong>ООО «Константа»</strong>
+          <p>Управляющая компания</p>
+        </div>
+        <div>
+          <p>Телефон: +7 (495) 000-00-00</p>
+          <p>E-mail: info@konstanta.ru</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/main.js"></script>
+  </body>
+</html>
