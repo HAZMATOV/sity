@@ -8,9 +8,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
+  <body class="variant-urban">
     <header class="site-header">
       <div class="container nav-wrap">
         <div class="brand">
@@ -21,12 +21,11 @@
           </div>
         </div>
         <nav class="main-nav">
-          <a href="/">Главная</a>
-          <a href="/about">О компании</a>
-          <a href="/services">Услуги</a>
-          <a href="/objects">Объекты</a>
-          <a href="/contacts">Контакты</a>
-          <a href="/admin">Админ</a>
+          <a href="index.html">Главная</a>
+          <a href="about.html">О компании</a>
+          <a href="services.html">Услуги</a>
+          <a href="objects.html">Объекты</a>
+          <a href="contacts.html">Контакты</a>
         </nav>
       </div>
     </header>
@@ -41,7 +40,8 @@
 
       <section class="section form-section">
         <div class="container contact-layout">
-          <div class="contact-info card">
+          <div class="contact-info card contact-panel">
+            <span class="eyebrow">На связи</span>
             <h3>ООО «Константа»</h3>
             <p><strong>Телефон:</strong> <a data-contact-phone href="tel:+74950000000">+7 (495) 000-00-00</a></p>
             <p><strong>E-mail:</strong> <a data-contact-email href="mailto:info@konstanta.ru">info@konstanta.ru</a></p>
@@ -80,6 +80,7 @@
       </div>
     </footer>
 
-    <script src="/main.js"></script>
+    <script src="static-content.js"></script>
+    <script src="main.js"></script>
   </body>
 </html>

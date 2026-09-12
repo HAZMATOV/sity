@@ -788,3 +788,131 @@ body.variant-urban .email-link { color: #34a853; }
   .map-widget iframe { min-height: 300px; }
   .map-addresses { max-height: 330px; }
 }
+
+/* Static green landing page polish */
+body.variant-urban {
+  overflow-x: hidden;
+  background: #f5f5f7;
+}
+body.variant-urban::before,
+body.variant-urban::after {
+  content: '';
+  position: fixed;
+  z-index: -1;
+  width: 42vw;
+  height: 42vw;
+  min-width: 280px;
+  min-height: 280px;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(8px);
+  opacity: 0.75;
+  animation: ambientFloat 16s ease-in-out infinite alternate;
+}
+body.variant-urban::before {
+  top: 12vh;
+  right: -18vw;
+  background: radial-gradient(circle, rgba(52,168,83,0.18), transparent 68%);
+}
+body.variant-urban::after {
+  left: -20vw;
+  bottom: 10vh;
+  background: radial-gradient(circle, rgba(78,150,255,0.13), transparent 68%);
+  animation-delay: -7s;
+}
+body.variant-urban .hero {
+  min-height: min(720px, 82vh);
+  display: grid;
+  align-items: center;
+  isolation: isolate;
+}
+body.variant-urban .hero::after {
+  content: '';
+  position: absolute;
+  inset: auto 8% 8% auto;
+  width: 180px;
+  height: 180px;
+  border: 1px solid rgba(52,168,83,0.22);
+  border-radius: 50%;
+  box-shadow: 0 0 0 28px rgba(52,168,83,0.05), 0 0 0 64px rgba(52,168,83,0.03);
+  animation: pulseRing 5s ease-in-out infinite;
+}
+body.variant-urban .hero-copy,
+body.variant-urban .hero-panel {
+  animation: riseIn 0.8s ease both;
+}
+body.variant-urban .hero-panel { animation-delay: 0.16s; }
+body.variant-urban .hero-card { animation: cardFloat 7s ease-in-out infinite; }
+body.variant-urban .section-heading { position: relative; }
+body.variant-urban .section-heading::after {
+  content: '';
+  display: block;
+  width: 44px;
+  height: 4px;
+  margin-top: 16px;
+  border-radius: 4px;
+  background: #34a853;
+}
+body.variant-urban .card,
+body.variant-urban .service-card,
+body.variant-urban .object-card,
+body.variant-urban .advantage,
+body.variant-urban .gallery-item {
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+body.variant-urban .card:hover,
+body.variant-urban .service-card:hover,
+body.variant-urban .object-card:hover,
+body.variant-urban .advantage:hover {
+  transform: translateY(-8px);
+  border-color: #b8dfc0;
+  box-shadow: 0 22px 44px rgba(52,168,83,0.12);
+}
+body.variant-urban .object-card:hover img { transform: scale(1.04); }
+body.variant-urban .object-card img { transition: transform 0.6s ease; }
+body.variant-urban .gallery-item:hover { transform: translateY(-6px) scale(1.015); }
+body.variant-urban .contact-strip {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(120deg, #eaf7ed 0%, #f8fbf8 60%, #e7f3ff 100%);
+}
+body.variant-urban .contact-strip::before {
+  content: '';
+  position: absolute;
+  width: 260px;
+  height: 260px;
+  right: -80px;
+  top: -100px;
+  border-radius: 50%;
+  background: rgba(52,168,83,0.12);
+}
+body.variant-urban .contact-strip h2,
+body.variant-urban .contact-strip p { color: #1d1d1f; }
+body.variant-urban .contact-actions { display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-end; gap: 12px; }
+body.variant-urban .contact-number { color: #1d1d1f; font-size: clamp(1.2rem, 2.4vw, 1.7rem); font-weight: 800; }
+body.variant-urban .contact-email { color: #34a853; font-weight: 700; }
+body.variant-urban .contact-panel { background: linear-gradient(145deg, #eef7f0, #fff); }
+body.variant-urban .site-footer { position: relative; overflow: hidden; }
+body.variant-urban .site-footer::before { content: ''; position: absolute; width: 220px; height: 220px; right: 5%; top: -150px; border: 1px solid rgba(52,168,83,0.2); border-radius: 50%; }
+.reveal-item { opacity: 0; transform: translateY(22px); transition: opacity 0.7s ease var(--reveal-delay, 0ms), transform 0.7s ease var(--reveal-delay, 0ms); }
+.reveal-item.is-visible { opacity: 1; transform: translateY(0); }
+
+@keyframes riseIn {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes ambientFloat {
+  from { transform: translate3d(0, 0, 0) scale(1); }
+  to { transform: translate3d(32px, -24px, 0) scale(1.08); }
+}
+@keyframes pulseRing {
+  0%, 100% { transform: scale(0.92); opacity: 0.55; }
+  50% { transform: scale(1.08); opacity: 1; }
+}
+@keyframes cardFloat {
+  0%, 100% { transform: rotate(2deg) translateY(0); }
+  50% { transform: rotate(1deg) translateY(-8px); }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+}

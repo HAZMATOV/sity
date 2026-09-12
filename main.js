@@ -74,6 +74,26 @@ function initDynamicHeader() {
   }, { passive: true });
 }
 
+function initRevealAnimations() {
+  const revealItems = document.querySelectorAll('.section-heading, .info-grid .card, .service-card, .object-card, .advantage, .gallery-item, .contact-strip-inner, .map-block');
+  if (!revealItems.length || !('IntersectionObserver' in window)) return;
+
+  revealItems.forEach((element, index) => {
+    element.classList.add('reveal-item');
+    element.style.setProperty('--reveal-delay', `${Math.min(index % 5, 4) * 70}ms`);
+  });
+
+  const observer = new IntersectionObserver((entries, currentObserver) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('is-visible');
+      currentObserver.unobserve(entry.target);
+    });
+  }, { threshold: 0.12 });
+
+  revealItems.forEach((element) => observer.observe(element));
+}
+
 async function fetchContent() {
   try {
     const res = await fetch('/api/content');
@@ -273,6 +293,7 @@ function initThemeSwitcher() {
 async function boot() {
   initVariantRoute();
   initDynamicHeader();
+  initRevealAnimations();
   const content = await fetchContent();
   const data = content || {
     services: [],
