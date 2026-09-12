@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="ООО «Константа» — спокойный деловой corporate сайт управляющей компании." />
+    <title>Константа Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "ООО «Константа»",
+        "description": "Управляющая компания для многоквартирных домов и объектов недвижимости.",
+        "url": "http://localhost:4000/urban",
+        "telephone": "+7 (495) 000-00-00",
+        "email": "info@konstanta.ru",
+        "address": { "@type": "PostalAddress", "addressLocality": "Москва", "streetAddress": "ул. Московская, д. 12, офис 401" }
+      }
+    </script>
+    <style>
+      body.variant-urban { background: #f5f5f7; color: #1d1d1f; font-family: Inter, sans-serif; }
+      body.variant-urban .site-header { background: rgba(245,245,247,0.82); border-bottom: 1px solid rgba(60,60,67,0.12); backdrop-filter: saturate(180%) blur(20px); }
+      body.variant-urban .brand-name, body.variant-urban .main-nav a { color: #1d1d1f; }
+      body.variant-urban .brand small { color: #6e6e73; }
+      body.variant-urban .main-nav a:hover { color: #34a853; }
+      body.variant-urban .brand-mark { border-radius: 12px; background: #34a853; color: #fff; }
+      body.variant-urban .hero { background: linear-gradient(180deg, #f5f5f7 0%, #eef7f0 100%); color: #1d1d1f; position: relative; overflow: hidden; padding: 116px 0 100px; }
+      body.variant-urban .hero::before { content: ''; position: absolute; width: 520px; height: 520px; right: -160px; top: -180px; border-radius: 50%; background: radial-gradient(circle, rgba(52,168,83,0.18), rgba(52,168,83,0.04) 55%, transparent 70%); }
+      body.variant-urban .hero-copy { position: relative; z-index: 1; }
+      body.variant-urban .eyebrow { color: #34a853; font-weight: 700; }
+      body.variant-urban .hero-copy h1 { max-width: 760px; font-size: clamp(2.8rem, 6vw, 6rem); font-weight: 700; letter-spacing: -0.07em; line-height: 0.98; }
+      body.variant-urban .hero-copy p { color: #6e6e73; max-width: 560px; }
+      body.variant-urban .hero-card { background: rgba(255,255,255,0.78); color: #1d1d1f; border: 1px solid rgba(60,60,67,0.13); border-radius: 28px; box-shadow: 0 24px 60px rgba(52,168,83,0.16); transform: rotate(2deg); backdrop-filter: blur(20px); }
+      body.variant-urban .hero-card h3, body.variant-urban .hero-card li { color: #1d1d1f; }
+      body.variant-urban .hero-card li::before { color: #34a853; }
+      body.variant-urban .btn { border-radius: 999px; text-transform: none; letter-spacing: 0; font-size: 0.95rem; }
+      body.variant-urban .btn-primary { background: #34a853; color: #fff; box-shadow: 0 8px 18px rgba(52,168,83,0.24); }
+      body.variant-urban .btn-secondary { background: transparent; border-color: #34a853; color: #27833f; }
+      body.variant-urban .hero-stats li { background: transparent; border: 0; border-left: 1px solid #d2d2d7; border-radius: 0; padding-left: 14px; }
+      body.variant-urban .hero-stats strong { color: #1d1d1f; }
+      body.variant-urban .hero-stats span { color: #6e6e73; }
+      body.variant-urban .section { background: #fff; }
+      body.variant-urban .section.muted { background: #f5f5f7; }
+      body.variant-urban .section-heading { max-width: 720px; }
+      body.variant-urban .section-heading h2 { color: #1d1d1f; font-weight: 700; letter-spacing: -0.05em; }
+      body.variant-urban .card, body.variant-urban .service-card, body.variant-urban .object-card, body.variant-urban .advantage, body.variant-urban .text-block { background: #fff; border: 1px solid #e3e3e7; border-radius: 20px; box-shadow: 0 12px 32px rgba(0,0,0,0.06); }
+      body.variant-urban .card p, body.variant-urban .service-card p, body.variant-urban .object-card p, body.variant-urban .advantage, body.variant-urban .text-block p { color: #6e6e73; }
+      body.variant-urban .service-card h3, body.variant-urban .object-card h3 { color: #1d1d1f; }
+      body.variant-urban .object-card img, body.variant-urban .gallery-item img { filter: saturate(0.88); }
+      body.variant-urban .site-footer { background: #f5f5f7; border-top: 1px solid #dedee2; }
+      body.variant-urban .site-footer strong { color: #1d1d1f; }
+      body.variant-urban .site-footer p { color: #6e6e73; }
+    </style>
+  </head>
+  <body class="variant-urban">
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <div class="brand">
+          <div class="brand-mark">К</div>
+          <div>
+            <span class="brand-name">ООО «Константа»</span>
+            <small>Управляющая компания</small>
+          </div>
+        </div>
+        <nav class="main-nav">
+          <a href="/urban">Главная</a>
+          <a href="/urban/about">О компании</a>
+          <a href="/urban/services">Услуги</a>
+          <a href="/urban/objects">Объекты</a>
+          <a href="/urban/contacts">Контакты</a>
+          <a href="/urban/admin">Админ</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-inner">
+          <div class="hero-copy">
+            <span class="eyebrow">Городская среда / Люди / Дома</span>
+            <h1>Город начинается с дома</h1>
+            <p>Мы собираем ежедневную жизнь дома в работающую систему: от чистого двора до тёплого света в подъезде.</p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="/urban/services">Наши услуги</a>
+              <a class="btn btn-secondary" href="/urban/contacts">Связаться с нами</a>
+            </div>
+            <ul class="hero-stats">
+              <li><strong>14 лет</strong><span>на рынке</span></li>
+              <li><strong>9</strong><span>объектов</span></li>
+              <li><strong>100%</strong><span>ответственность</span></li>
+            </ul>
+          </div>
+          <div class="hero-panel">
+            <div class="hero-card">
+              <h3>Корпоративный подход</h3>
+              <ul>
+                <li>Управление МКД</li>
+                <li>Комфорт и безопасность</li>
+                <li>Техническое сопровождение</li>
+                <li>Поддержка собственников</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-heading">
+            <span class="eyebrow">О компании</span>
+            <h2>Не просто обслуживаем. Улучшаем среду.</h2>
+          </div>
+          <div class="info-grid">
+            <div class="card">
+              <p>ООО «Константа» работает на рынке 14 лет и входит в группу управляющих компаний, включающую ООО «Бизнес плюс» и ООО «Респектабельность К».</p>
+            </div>
+            <div class="card">
+              <p>Мы поддерживаем порядок, качество и удобство эксплуатации объектов на всех этапах работы.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section muted">
+        <div class="container">
+          <div class="section-heading">
+            <span class="eyebrow">Услуги</span>
+            <h2>Услуги по управлению и содержанию</h2>
+          </div>
+          <div class="services-grid" id="servicesGrid"></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-heading">
+            <span class="eyebrow">Объекты</span>
+            <h2>Наши управляемые объекты</h2>
+          </div>
+          <div class="object-grid" id="objectGrid"></div>
+        </div>
+      </section>
+
+      <section class="section muted">
+        <div class="container">
+          <div class="section-heading">
+            <span class="eyebrow">Преимущества</span>
+            <h2>Почему выбирают нас</h2>
+          </div>
+          <div class="advantages-list" id="advantagesList"></div>
+        </div>
+      </section>
+
+      <section class="section gallery-section">
+        <div class="container">
+          <div class="section-heading">
+            <span class="eyebrow">Галерея</span>
+            <h2>Наши объекты и команда</h2>
+          </div>
+          <div class="gallery-grid" id="galleryGrid"></div>
+        </div>
+      </section>
+
+      <section class="section urban-contact-band">
+        <div class="container urban-contact-inner">
+          <div>
+            <span class="eyebrow">На связи</span>
+            <h2>Обсудим ваш дом?</h2>
+            <p>Ответим на вопросы по управлению, эксплуатации и обслуживанию объектов.</p>
+          </div>
+          <div class="urban-contact-details">
+            <a class="contact-pill" data-contact-phone href="tel:+74950000000">+7 (495) 000-00-00</a>
+            <a class="contact-pill" data-contact-email href="mailto:info@konstanta.ru">info@konstanta.ru</a>
+            <a class="btn btn-primary" href="/urban/contacts">Оставить обращение</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>
+          <strong>ООО «Константа»</strong>
+          <p>Управляющая компания</p>
+        </div>
+        <div>
+          <p>Телефон: +7 (495) 000-00-00</p>
+          <p>E-mail: info@konstanta.ru</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/main.js"></script>
+  </body>
+</html>

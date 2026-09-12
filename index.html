@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="ООО «Константа» — управляющая компания. Управление МКД, эксплуатация объектов, электрика, сантехника, содержание жилых домов." />
+    <meta name="keywords" content="Управляющая компания, ООО Константа, управление МКД, эксплуатация объектов, ремонт, электрика, сантехника" />
+    <meta property="og:title" content="ООО «Константа»" />
+    <meta property="og:description" content="Управляющая компания для комфортного и безопасного проживания." />
+    <title>ООО «Константа» | Главная</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="variant-urban">
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <div class="brand">
+          <div class="brand-mark">К</div>
+          <div>
+            <span class="brand-name">ООО «Константа»</span>
+            <small>Управляющая компания</small>
+          </div>
+        </div>
+        <nav class="main-nav">
+          <a href="#top">Главная</a>
+          <a href="#about">О компании</a>
+          <a href="#services">Услуги</a>
+          <a href="#objects">Объекты</a>
+          <a href="#contacts">Контакты</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="container hero-inner">
+          <div class="hero-copy">
+            <span class="eyebrow">Городская среда / Люди / Дома</span>
+            <h1>Город начинается с дома</h1>
+            <p>Мы собираем ежедневную жизнь дома в работающую систему: от чистого двора до тёплого света в подъезде.</p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#services">Наши услуги</a>
+              <a class="btn btn-secondary" href="#contacts">Связаться с нами</a>
+            </div>
+            <ul class="hero-stats">
+              <li><strong>14 лет</strong><span>на рынке</span></li>
+              <li><strong>9</strong><span>объектов</span></li>
+              <li><strong>100%</strong><span>ответственность</span></li>
+            </ul>
+          </div>
+          <div class="hero-panel">
+            <div class="hero-card">
+              <h3>Ключевые направления</h3>
+              <ul>
+                <li>Управление МКД</li>
+                <li>Эксплуатация объектов</li>
+                <li>Электротехнические работы</li>
+                <li>Сантехническое обслуживание</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="about">
+        <div class="container">
+          <div class="section-heading">
+            <span class="eyebrow">О компании</span>
+            <h2>Честная работа, прозрачные обязательства, комфорт собственников</h2>
+          </div>
+          <div class="info-grid">
+            <div class="card">
+              <p>ООО «Константа» работает на рынке 14 лет и входит в группу управляющих компаний, включающую ООО «Бизнес плюс» и ООО «Респектабельность К».</p>
+            </div>
+            <div class="card">
+              <p>Мы обеспечиваем стабильное содержание объектов, контроль качества работ и комфортное взаимодействие с собственниками.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section muted" id="services">
+        <div class="container">
+          <div class="section-heading">
+            <span class="eyebrow">Услуги</span>
+            <h2>Комплексное управление и техническое обслуживание</h2>
+          </div>
+          <div class="services-grid" id="servicesGrid"></div>
+        </div>
+      </section>
+
+      <section class="section" id="objects">
+        <div class="container">
+          <div class="section-heading">
+            <span class="eyebrow">Объекты</span>
+            <h2>Надёжное управление жилыми и общественными объектами</h2>
+          </div>
+          <div class="object-grid" id="objectGrid"></div>
+        </div>
+      </section>
+
+      <section class="section muted">
+        <div class="container">
+          <div class="section-heading">
+            <span class="eyebrow">Преимущества</span>
+            <h2>Почему выбирают именно нас</h2>
+          </div>
+          <div class="advantages-list" id="advantagesList"></div>
+        </div>
+      </section>
+
+      <section class="section gallery-section">
+        <div class="container">
+          <div class="section-heading">
+            <span class="eyebrow">Галерея</span>
+            <h2>Наши объекты и работа команды</h2>
+          </div>
+          <div class="gallery-grid" id="galleryGrid"></div>
+        </div>
+      </section>
+
+      <section class="section contact-strip" id="contacts">
+        <div class="container contact-strip-inner">
+          <div>
+            <span class="eyebrow">Контакты</span>
+            <h2>Свяжитесь с нами</h2>
+          </div>
+          <a class="btn btn-primary" data-contact-phone href="tel:+74950000000">+7 (495) 000-00-00</a>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-heading">
+            <span class="eyebrow">География работы</span>
+            <h2>Объекты на карте</h2>
+          </div>
+          <div id="map" class="map-block" aria-label="Карта объектов"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>
+          <strong>ООО «Константа»</strong>
+          <p>Управляющая компания</p>
+        </div>
+        <div>
+          <p>Телефон: +7 (495) 000-00-00</p>
+          <p>E-mail: info@konstanta.ru</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="static-content.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
