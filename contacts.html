@@ -3,8 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Контакты ООО «Константа»: телефон, E-mail, адрес офиса и карта объектов." />
+    <meta name="description" content="Контакты ООО «Константа»: телефон, E-mail, адрес офиса, форма обратной связи и карта объектов." />
     <title>Контакты | ООО «Константа»</title>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "ООО «Константа»",
+        "telephone": "+7 (495) 000-00-00",
+        "email": "info@konstanta.ru",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Москва, ул. Московская, д. 12, офис 401",
+          "addressLocality": "Москва",
+          "addressCountry": "RU"
+        },
+        "description": "Управляющая компания ООО «Константа» с 14-летним опытом управления многоквартирными домами и объектами недвижимости."
+      }
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -50,12 +66,39 @@
           </div>
 
           <div class="card phone-contact-card">
-            <span class="eyebrow">Быстрая связь</span>
-            <h2>Позвоните нам</h2>
-            <p>Ответим на вопросы по управлению домами, эксплуатации и объектам.</p>
-            <a class="phone-number" data-contact-phone href="tel:+74950000000">+7 (495) 000-00-00</a>
-            <a class="btn btn-primary" data-contact-phone href="tel:+74950000000">Позвонить</a>
-            <a class="email-link" data-contact-email href="mailto:info@konstanta.ru">info@konstanta.ru</a>
+            <span class="eyebrow">Форма обратной связи</span>
+            <h2>Напишите нам</h2>
+            <form id="contactForm" class="contact-form">
+              <div class="field-group">
+                <label for="name">Имя</label>
+                <input id="name" name="name" type="text" placeholder="Введите ваше имя" required />
+              </div>
+              <div class="field-group">
+                <label for="phone">Телефон</label>
+                <input id="phone" name="phone" type="tel" placeholder="+7 (___) ___-__-__" required />
+              </div>
+              <div class="field-group">
+                <label for="email">E-mail</label>
+                <input id="email" name="email" type="email" placeholder="example@mail.ru" required />
+              </div>
+              <div class="field-group">
+                <label for="subject">Тема обращения</label>
+                <select id="subject" name="subject">
+                  <option value="Общий вопрос">Общий вопрос</option>
+                  <option value="Управление МКД">Управление МКД</option>
+                  <option value="Эксплуатация объектов">Эксплуатация объектов</option>
+                  <option value="Электрика">Электрика</option>
+                  <option value="Сантехника">Сантехника</option>
+                  <option value="Договор и сотрудничество">Договор и сотрудничество</option>
+                </select>
+              </div>
+              <div class="field-group">
+                <label for="message">Сообщение</label>
+                <textarea id="message" name="message" placeholder="Опишите ваш вопрос или задачу" required></textarea>
+              </div>
+              <button class="btn btn-primary" type="submit">Отправить сообщение</button>
+              <p id="formStatus" class="form-status" aria-live="polite"></p>
+            </form>
           </div>
         </div>
       </section>

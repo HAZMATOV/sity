@@ -1,23 +1,5 @@
 const baseUrl = window.location.origin;
 
-function initVariantRoute() {
-  if (window.location.pathname === '/urban' || window.location.pathname.startsWith('/urban/')) {
-    document.body.classList.add('variant-urban');
-    document.querySelectorAll('.main-nav a').forEach((link) => {
-      const path = new URL(link.href).pathname;
-      const mapping = {
-        '/': '/urban',
-        '/about': '/urban/about',
-        '/services': '/urban/services',
-        '/objects': '/urban/objects',
-        '/contacts': '/urban/contacts',
-        '/admin': '/urban/admin'
-      };
-      if (mapping[path]) link.href = mapping[path];
-    });
-  }
-}
-
 function initDynamicHeader() {
   const header = document.querySelector('.site-header');
   const nav = header?.querySelector('.main-nav');
@@ -31,12 +13,7 @@ function initDynamicHeader() {
   menuButton.setAttribute('aria-expanded', 'false');
   menuButton.innerHTML = '<span></span><span></span><span></span>';
 
-  const headerAction = document.createElement('a');
-  headerAction.className = 'header-action';
-  headerAction.href = document.body.classList.contains('variant-urban') ? '/urban/contacts' : '/contacts';
-  headerAction.textContent = 'Обсудить задачу';
-
-  navWrap.append(menuButton, headerAction);
+  navWrap.append(menuButton);
 
   const currentPath = window.location.pathname.replace(/\/$/, '') || '/';
   nav.querySelectorAll('a').forEach((link) => {
@@ -60,38 +37,6 @@ function initDynamicHeader() {
     menuButton.setAttribute('aria-expanded', String(isOpen));
     menuButton.setAttribute('aria-label', isOpen ? 'Закрыть меню' : 'Открыть меню');
   });
-
-  let lastScrollY = window.scrollY;
-  window.addEventListener('scroll', () => {
-    const currentScrollY = window.scrollY;
-    header.classList.toggle('is-scrolled', currentScrollY > 12);
-    if (currentScrollY > lastScrollY && currentScrollY > 180) {
-      header.classList.add('is-hidden');
-    } else {
-      header.classList.remove('is-hidden');
-    }
-    lastScrollY = currentScrollY;
-  }, { passive: true });
-}
-
-function initRevealAnimations() {
-  const revealItems = document.querySelectorAll('.section-heading, .info-grid .card, .service-card, .object-card, .advantage, .gallery-item, .contact-strip-inner, .map-block');
-  if (!revealItems.length || !('IntersectionObserver' in window)) return;
-
-  revealItems.forEach((element, index) => {
-    element.classList.add('reveal-item');
-    element.style.setProperty('--reveal-delay', `${Math.min(index % 5, 4) * 70}ms`);
-  });
-
-  const observer = new IntersectionObserver((entries, currentObserver) => {
-    entries.forEach((entry) => {
-      if (!entry.isIntersecting) return;
-      entry.target.classList.add('is-visible');
-      currentObserver.unobserve(entry.target);
-    });
-  }, { threshold: 0.12 });
-
-  revealItems.forEach((element) => observer.observe(element));
 }
 
 async function fetchContent() {
@@ -274,26 +219,8 @@ function renderMap(objects) {
   mapEl.innerHTML = html;
 }
 
-function initThemeSwitcher() {
-  if (!document.querySelector('[data-theme]')) return;
-
-  const current = localStorage.getItem('konstanta-theme') || 'premium';
-  document.body.classList.add(`theme-${current}`);
-
-  document.querySelectorAll('[data-theme]').forEach((button) => {
-    button.addEventListener('click', () => {
-      const next = button.dataset.theme;
-      document.body.classList.remove('theme-premium', 'theme-tech', 'theme-urban');
-      document.body.classList.add(`theme-${next}`);
-      localStorage.setItem('konstanta-theme', next);
-    });
-  });
-}
-
 async function boot() {
-  initVariantRoute();
   initDynamicHeader();
-  initRevealAnimations();
   const content = await fetchContent();
   const data = content || {
     services: [],
@@ -316,7 +243,6 @@ async function boot() {
     document.getElementById('saveContentBtn')?.addEventListener('click', saveContent);
   }
 
-  initThemeSwitcher();
   initContactForm();
 }
 

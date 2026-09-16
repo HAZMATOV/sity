@@ -48,7 +48,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(publicDir));
 
 app.get('/', (req, res) => {
-  res.sendFile(path.join(publicDir, 'urban.html'));
+  res.sendFile(path.join(publicDir, 'index.html'));
 });
 
 app.get('/about', (req, res) => {
@@ -68,38 +68,6 @@ app.get('/contacts', (req, res) => {
 });
 
 app.get('/admin', (req, res) => {
-  res.sendFile(path.join(publicDir, 'admin.html'));
-});
-
-app.get('/premium', (req, res) => {
-  res.sendFile(path.join(publicDir, 'premium.html'));
-});
-
-app.get('/tech', (req, res) => {
-  res.sendFile(path.join(publicDir, 'tech.html'));
-});
-
-app.get('/urban', (req, res) => {
-  res.sendFile(path.join(publicDir, 'urban.html'));
-});
-
-app.get('/urban/about', (req, res) => {
-  res.sendFile(path.join(publicDir, 'about.html'));
-});
-
-app.get('/urban/services', (req, res) => {
-  res.sendFile(path.join(publicDir, 'services.html'));
-});
-
-app.get('/urban/objects', (req, res) => {
-  res.sendFile(path.join(publicDir, 'objects.html'));
-});
-
-app.get('/urban/contacts', (req, res) => {
-  res.sendFile(path.join(publicDir, 'contacts.html'));
-});
-
-app.get('/urban/admin', (req, res) => {
   res.sendFile(path.join(publicDir, 'admin.html'));
 });
 
