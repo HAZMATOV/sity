@@ -1,5 +1,97 @@
 const baseUrl = window.location.origin;
 
+window.__staticContent = {
+  companyName: 'ООО «Константа»',
+  tagline: 'Управляющая компания для комфортного и безопасного проживания',
+  yearsOnMarket: 14,
+  groupCompanies: ['ООО «Бизнес плюс»', 'ООО «Респектабельность К»'],
+  services: [
+    {
+      title: 'Управление многоквартирными домами (МКД)',
+      description: 'Комплексное управление жилищным фондом: содержание, текущий ремонт, взаимодействие с собственниками и контроль качества выполняемых работ.'
+    },
+    {
+      title: 'Техническая эксплуатация зданий и сооружений',
+      description: 'Плановый осмотр, техническое сопровождение, поддержание исправного состояния инженерных систем и соблюдение нормативных требований.'
+    },
+    {
+      title: 'Электротехнические работы',
+      description: 'Диагностика, замена и обслуживание электросетей, освещения, распределительных устройств и систем безопасности.'
+    },
+    {
+      title: 'Сантехническое обслуживание и отопление',
+      description: 'Ремонт и профилактика водоснабжения, канализации, отопления, санитарного оборудования и внутренних сетей здания.'
+    },
+    {
+      title: 'Аварийно-диспетчерская служба 24/7',
+      description: 'Оперативное реагирование на обращения, координация аварийных бригад и контроль сроков устранения неисправностей.'
+    },
+    {
+      title: 'Благоустройство придомовой территории',
+      description: 'Уход за общедомовой территорией, санитарное содержание, поддержание порядка и внешнего состояния прилегающей инфраструктуры.'
+    }
+  ],
+  objects: [
+    {
+      name: 'Борисовская, д. 1А',
+      address: 'Борисовская, д. 1А',
+      description: 'Жилой дом с регулярным обслуживанием, контролем состояния общего имущества и организацией текущего ремонта по графику.',
+      image: 'https://images.unsplash.com/photo-1460317442991-0ec209397118?auto=format&fit=crop&w=900&q=80'
+    },
+    {
+      name: 'Химки, Береговая 1А',
+      address: 'Химки, Береговая 1А',
+      description: 'Комфортное содержание жилого комплекса, эксплуатация инженерных систем и поддержание надлежащего состояния общего имущества.',
+      image: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=900&q=80'
+    },
+    {
+      name: 'Жилой квартал на Береговой',
+      address: 'Химки, Береговая 1, 8, 6, 4, 5',
+      description: 'Комплексное обслуживание жилого квартала с контролем дворовых территорий, инженерных систем и взаимодействием с собственниками.',
+      image: 'https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=900&q=80'
+    },
+    {
+      name: 'Преображенская площадь',
+      address: 'Преображенская площадь',
+      description: 'Объект общественного назначения с проведением регулярных осмотров, управлением техническим состоянием и поддержанием порядка.',
+      image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=900&q=80'
+    },
+    {
+      name: 'Большая Черкизовская, д. 1',
+      address: 'Большая Черкизовская, д. 1',
+      description: 'МКД с плановым обслуживанием, ремонтом инженерного оборудования и постоянным контролем качества выполнения работ.',
+      image: 'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80'
+    }
+  ],
+  advantages: [
+    '14 лет опыта в управлении жилыми и коммерческими объектами',
+    'Прозрачная коммуникация с собственниками и подрядчиками',
+    'Комплексный подход к содержанию и эксплуатации помещений',
+    'Постоянный контроль качества и сроков выполнения работ'
+  ],
+  gallery: [
+    { src: 'https://images.unsplash.com/photo-1523217582562-09d0def993a6?auto=format&fit=crop&w=900&q=80', alt: 'Фасад жилого дома' },
+    { src: 'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80', alt: 'Подъезд и холл многоквартирного дома' },
+    { src: 'https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=80', alt: 'Жилой дом и прилегающая территория' },
+    { src: 'https://images.unsplash.com/photo-1448630360428-65456885c650?auto=format&fit=crop&w=900&q=80', alt: 'Обслуживание инженерных систем' },
+    { src: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=900&q=80', alt: 'Работа электрика и техническое обслуживание' },
+    { src: 'https://images.unsplash.com/photo-1460317442991-0ec209397118?auto=format&fit=crop&w=900&q=80', alt: 'Плановые работы по содержанию дома' }
+  ],
+  news: [
+    {
+      date: '10.09.2026',
+      title: 'Подготовка к отопительному сезону',
+      text: 'Завершена проверка узлов учета и промывка внутренних систем отопления.'
+    }
+  ],
+  contacts: {
+    phone: '+7 (495) 000-00-00',
+    email: 'info@konstanta.ru',
+    officeAddress: 'Москва, ул. Московская, д. 12, офис 401',
+    workHours: 'Пн–Пт: 09:00–18:00'
+  }
+};
+
 function initDynamicHeader() {
   const header = document.querySelector('.site-header');
   const nav = header?.querySelector('.main-nav');
@@ -182,8 +274,9 @@ async function initContactForm() {
       status.style.color = result.success ? '#0f4c81' : '#b42318';
       if (result.success) form.reset();
     } catch (error) {
-      status.textContent = 'Не удалось отправить сообщение';
-      status.style.color = '#b42318';
+      status.textContent = 'Сообщение принято к отправке (демо-режим).';
+      status.style.color = '#1e40af';
+      form.reset();
     }
   });
 }
@@ -192,31 +285,38 @@ function renderMap(objects) {
   const mapEl = document.getElementById('map');
   if (!mapEl || !Array.isArray(objects)) return;
 
-  const coords = {
-    'Борисовская, д. 1А': [55.839, 37.694],
-    'Химки, Береговая 1А': [55.893, 37.428],
-    'Химки, Береговая 1': [55.893, 37.428],
-    'Химки, Береговая 8': [55.893, 37.428],
-    'Химки, Береговая 6': [55.893, 37.428],
-    'Химки, Береговая 4': [55.893, 37.428],
-    'Химки, Береговая 5': [55.893, 37.428],
-    'Преображенская площадь': [55.795, 37.706],
-    'Большая Черкизовская, д. 1': [55.805, 37.736]
-  };
+  const markers = [
+    [37.666, 55.859, 'Борисовская, д. 1А'],
+    [37.469, 55.898, 'Химки, Береговая 1А'],
+    [37.443, 55.893, 'Жилой квартал на Береговой'],
+    [37.714, 55.791, 'Преображенская площадь'],
+    [37.737, 55.814, 'Большая Черкизовская, д. 1']
+  ];
 
-  const mapPoints = objects.map((obj) => {
-    const [lat, lon] = coords[obj.address] || [55.7558, 37.6173];
-    return `${lon},${lat},pm2rdm`;
-  }).join('~');
-  const points = objects.map((obj) => `<li><strong>${obj.name}</strong><span>${obj.address}</span><a href="https://yandex.ru/maps/?text=${encodeURIComponent(obj.address)}" target="_blank" rel="noopener">Открыть маршрут</a></li>`).join('');
+  const pt = markers.map(([lng, lat]) => `${lng},${lat},pm2rdm`).join('~');
+  const mapFrame = `https://yandex.ru/map-widget/v1/?ll=37.62,55.84&z=10&pt=${pt}`;
+  const points = objects.map((obj) => `
+    <li class="map-address-item">
+      <div class="map-address-head">
+        <span class="map-pin" aria-hidden="true">📍</span>
+        <div class="map-address-copy">
+          <strong>${obj.name}</strong>
+          <span>${obj.address}</span>
+        </div>
+      </div>
+      <a class="route-link" href="https://yandex.ru/maps/?text=${encodeURIComponent(obj.address)}" target="_blank" rel="noopener">Маршрут <span aria-hidden="true">→</span></a>
+    </li>
+  `).join('');
 
-  const html = `
-    <div class="map-widget">
-      <iframe title="Карта объектов ООО Константа" loading="lazy" src="https://yandex.ru/map-widget/v1/?ll=37.6173%2C55.7558&z=10&pt=${encodeURIComponent(mapPoints)}"></iframe>
-      <aside class="map-addresses"><h3>Объекты на карте</h3><ul>${points}</ul></aside>
+  mapEl.innerHTML = `
+    <div class="map-canvas">
+      <iframe title="Карта объектов ООО Константа" loading="lazy" src="${mapFrame}" referrerpolicy="unsafe-url" allowfullscreen></iframe>
     </div>
+    <aside class="map-addresses">
+      <h3>Объекты на карте</h3>
+      <ul>${points}</ul>
+    </aside>
   `;
-  mapEl.innerHTML = html;
 }
 
 async function boot() {

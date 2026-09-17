@@ -4,32 +4,61 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="ООО «Константа» — управляющая компания. Управление МКД, эксплуатация объектов, электрика, сантехника, содержание жилых домов." />
-    <meta name="keywords" content="Управляющая компания, ООО Константа, управление МКД, эксплуатация объектов, ремонт, электрика, сантехника" />
-    <meta property="og:title" content="ООО «Константа»" />
-    <meta property="og:description" content="Управляющая компания для комфортного и безопасного проживания." />
     <title>ООО «Константа» | Главная</title>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "HomeAndConstructionBusiness",
+        "name": "ООО «Константа»",
+        "telephone": "+7 (495) 000-00-00",
+        "email": "info@konstanta.ru",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Москва, ул. Московская, д. 12, офис 401",
+          "addressLocality": "Москва",
+          "addressCountry": "RU"
+        },
+        "areaServed": "Москва",
+        "description": "Управляющая компания ООО «Константа» оказывает услуги по управлению многоквартирными домами, технической эксплуатации зданий, электромонтажным и сантехническим работам, а также благоустройству придомовой территории.",
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Услуги ООО «Константа»",
+          "itemListElement": [
+            "Управление многоквартирными домами (МКД)",
+            "Техническая эксплуатация зданий и сооружений",
+            "Электротехнические работы",
+            "Сантехническое обслуживание и отопление",
+            "Аварийно-диспетчерская служба 24/7",
+            "Благоустройство придомовой территории"
+          ]
+        }
+      }
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body class="variant-urban">
+  <body>
     <header class="site-header">
       <div class="container nav-wrap">
-        <div class="brand">
-          <div class="brand-mark">К</div>
-          <div>
-            <span class="brand-name">ООО «Константа»</span>
+        <a href="index.html" class="brand" aria-label="ООО Константа главная">
+          <span class="brand-mark">К</span>
+          <span class="brand-text">
+            <strong>ООО «Константа»</strong>
             <small>Управляющая компания</small>
-          </div>
-        </div>
-        <nav class="main-nav">
-          <a href="#top">Главная</a>
+          </span>
+        </a>
+
+        <nav class="main-nav" aria-label="Основная навигация">
+          <a href="index.html" class="is-active">Главная</a>
           <a href="#about">О компании</a>
           <a href="#services">Услуги</a>
           <a href="#objects">Объекты</a>
           <a href="#contacts">Контакты</a>
         </nav>
+
+        <a class="header-button" href="contacts.html">Связаться</a>
       </div>
     </header>
 
@@ -39,22 +68,25 @@
           <div class="hero-copy">
             <span class="eyebrow">Городская среда / Люди / Дома</span>
             <h1>Город начинается с дома</h1>
-            <p>Мы собираем ежедневную жизнь дома в работающую систему: от чистого двора до тёплого света в подъезде.</p>
+            <p>Мы берём на себя организацию жизни дома: содержание, контроль качества, оперативную реакцию на обращения и стабильное обслуживание объектов.</p>
+
             <div class="hero-actions">
               <a class="btn btn-primary" href="#services">Наши услуги</a>
               <a class="btn btn-secondary" href="#contacts">Связаться с нами</a>
             </div>
+
             <ul class="hero-stats">
               <li><strong>14 лет</strong><span>на рынке</span></li>
-              <li><strong>9</strong><span>объектов</span></li>
+              <li><strong>9+</strong><span>объектов</span></li>
               <li><strong>100%</strong><span>ответственность</span></li>
             </ul>
           </div>
+
           <div class="hero-panel">
             <div class="hero-card">
-              <h3>Ключевые направления</h3>
+              <span class="eyebrow">Ключевые направления</span>
               <ul>
-                <li>Управление МКД</li>
+                <li>Управление многоквартирными домами</li>
                 <li>Эксплуатация объектов</li>
                 <li>Электротехнические работы</li>
                 <li>Сантехническое обслуживание</li>
@@ -68,20 +100,21 @@
         <div class="container">
           <div class="section-heading">
             <span class="eyebrow">О компании</span>
-            <h2>Честная работа, прозрачные обязательства, комфорт собственников</h2>
+            <h2>Надёжная управляющая компания для комфортного и безопасного проживания</h2>
           </div>
+
           <div class="info-grid">
-            <div class="card">
+            <article class="card">
               <p>ООО «Константа» работает на рынке 14 лет и входит в группу управляющих компаний, включающую ООО «Бизнес плюс» и ООО «Респектабельность К».</p>
-            </div>
-            <div class="card">
-              <p>Мы обеспечиваем стабильное содержание объектов, контроль качества работ и комфортное взаимодействие с собственниками.</p>
-            </div>
+            </article>
+            <article class="card">
+              <p>Мы обеспечиваем стабильное содержание объектов, прозрачное взаимодействие с собственниками и безупречный контроль качества выполнения работ.</p>
+            </article>
           </div>
         </div>
       </section>
 
-      <section class="section muted" id="services">
+      <section class="section section-muted" id="services">
         <div class="container">
           <div class="section-heading">
             <span class="eyebrow">Услуги</span>
@@ -95,13 +128,13 @@
         <div class="container">
           <div class="section-heading">
             <span class="eyebrow">Объекты</span>
-            <h2>Надёжное управление жилыми и общественными объектами</h2>
+            <h2>Надёжная работа на жилых и коммерческих объектах</h2>
           </div>
           <div class="object-grid" id="objectGrid"></div>
         </div>
       </section>
 
-      <section class="section muted">
+      <section class="section section-muted">
         <div class="container">
           <div class="section-heading">
             <span class="eyebrow">Преимущества</span>
@@ -125,12 +158,13 @@
         <div class="container contact-strip-inner">
           <div>
             <span class="eyebrow">Контакты</span>
-            <h2>Обсудим ваш дом?</h2>
-            <p>Ответим по телефону и подскажем, как организовать управление объектом.</p>
+            <h2>Обсудим ваш объект?</h2>
+            <p>Напишите нам, и мы расскажем, как организовать стабильное управление домом или объектом.</p>
           </div>
+
           <div class="contact-actions">
-            <a class="contact-number" data-contact-phone href="tel:+74950000000">+7 (495) 000-00-00</a>
-            <a class="contact-email" data-contact-email href="mailto:info@konstanta.ru">info@konstanta.ru</a>
+            <a class="contact-link" data-contact-phone href="tel:+74950000000">+7 (495) 000-00-00</a>
+            <a class="contact-link" data-contact-email href="mailto:info@konstanta.ru">info@konstanta.ru</a>
             <a class="btn btn-primary" href="contacts.html">Все контакты</a>
           </div>
         </div>
@@ -140,7 +174,7 @@
         <div class="container">
           <div class="section-heading">
             <span class="eyebrow">География работы</span>
-            <h2>Объекты на карте</h2>
+            <h2>Регионы и объекты</h2>
           </div>
           <div id="map" class="map-block" aria-label="Карта объектов"></div>
         </div>
@@ -154,13 +188,12 @@
           <p>Управляющая компания</p>
         </div>
         <div>
-          <p>Телефон: +7 (495) 000-00-00</p>
-          <p>E-mail: info@konstanta.ru</p>
+          <p>Телефон: <span data-contact-phone>+7 (495) 000-00-00</span></p>
+          <p>E-mail: <span data-contact-email>info@konstanta.ru</span></p>
         </div>
       </div>
     </footer>
 
-    <script src="static-content.js"></script>
     <script src="main.js"></script>
   </body>
 </html>

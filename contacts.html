@@ -3,110 +3,104 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Контакты ООО «Константа»: телефон, E-mail, адрес офиса, форма обратной связи и карта объектов." />
+    <meta name="description" content="Контакты ООО «Константа»: телефон, E-mail, адрес офиса, форма обратной связи." />
     <title>Контакты | ООО «Константа»</title>
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "ООО «Константа»",
-        "telephone": "+7 (495) 000-00-00",
-        "email": "info@konstanta.ru",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Москва, ул. Московская, д. 12, офис 401",
-          "addressLocality": "Москва",
-          "addressCountry": "RU"
-        },
-        "description": "Управляющая компания ООО «Константа» с 14-летним опытом управления многоквартирными домами и объектами недвижимости."
-      }
-    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body class="variant-urban">
+  <body>
     <header class="site-header">
       <div class="container nav-wrap">
-        <div class="brand">
-          <div class="brand-mark">К</div>
-          <div>
-            <span class="brand-name">ООО «Константа»</span>
+        <a href="index.html" class="brand" aria-label="ООО Константа главная">
+          <span class="brand-mark">К</span>
+          <span class="brand-text">
+            <strong>ООО «Константа»</strong>
             <small>Управляющая компания</small>
-          </div>
-        </div>
-        <nav class="main-nav">
+          </span>
+        </a>
+
+        <nav class="main-nav" aria-label="Навигация по странице">
           <a href="index.html">Главная</a>
-          <a href="about.html">О компании</a>
-          <a href="services.html">Услуги</a>
-          <a href="objects.html">Объекты</a>
-          <a href="contacts.html">Контакты</a>
+          <a href="contacts.html" class="is-active">Контакты</a>
         </nav>
+
+        <a class="header-button" href="tel:+74950000000">Позвонить</a>
       </div>
     </header>
 
-    <main>
-      <section class="page-hero">
-        <div class="container narrow">
-          <span class="eyebrow">Контакты</span>
-          <h1>Свяжитесь с нами</h1>
+    <main class="contact-page-shell">
+      <section class="contact-card info-card">
+        <div class="card-tag">На связи</div>
+        <h1>ООО «Константа»</h1>
+
+        <div class="contact-row">
+          <span>Телефон</span>
+          <a href="tel:+74950000000">+7 (495) 000-00-00</a>
+        </div>
+
+        <div class="contact-row">
+          <span>E-mail</span>
+          <a href="mailto:info@konstanta.ru">info@konstanta.ru</a>
+        </div>
+
+        <div class="contact-row">
+          <span>Адрес офиса</span>
+          <p>Москва, ул. Московская, д. 12, офис 401</p>
+        </div>
+
+        <div class="contact-row">
+          <span>Режим работы</span>
+          <p>Пн–Пт: 09:00–18:00</p>
         </div>
       </section>
 
-      <section class="section form-section">
-        <div class="container contact-layout">
-          <div class="contact-info card contact-panel">
-            <span class="eyebrow">На связи</span>
-            <h3>ООО «Константа»</h3>
-            <p><strong>Телефон:</strong> <a data-contact-phone href="tel:+74950000000">+7 (495) 000-00-00</a></p>
-            <p><strong>E-mail:</strong> <a data-contact-email href="mailto:info@konstanta.ru">info@konstanta.ru</a></p>
-            <p><strong>Адрес офиса:</strong> <span data-contact-address>Москва, ул. Московская, д. 12, офис 401</span></p>
-            <p><strong>Режим работы:</strong> <span data-contact-hours>Пн–Пт: 09:00–18:00</span></p>
+      <section class="contact-card form-card">
+        <div class="card-tag">Форма обратной связи</div>
+        <h2>Напишите нам</h2>
+
+        <form id="contactForm" class="contact-form">
+          <div class="field-group">
+            <label for="name">Имя</label>
+            <input id="name" name="name" type="text" placeholder="Введите ваше имя" required />
           </div>
 
-          <div class="card phone-contact-card">
-            <span class="eyebrow">Форма обратной связи</span>
-            <h2>Напишите нам</h2>
-            <form id="contactForm" class="contact-form">
-              <div class="field-group">
-                <label for="name">Имя</label>
-                <input id="name" name="name" type="text" placeholder="Введите ваше имя" required />
-              </div>
-              <div class="field-group">
-                <label for="phone">Телефон</label>
-                <input id="phone" name="phone" type="tel" placeholder="+7 (___) ___-__-__" required />
-              </div>
-              <div class="field-group">
-                <label for="email">E-mail</label>
-                <input id="email" name="email" type="email" placeholder="example@mail.ru" required />
-              </div>
-              <div class="field-group">
-                <label for="subject">Тема обращения</label>
-                <select id="subject" name="subject">
-                  <option value="Общий вопрос">Общий вопрос</option>
-                  <option value="Управление МКД">Управление МКД</option>
-                  <option value="Эксплуатация объектов">Эксплуатация объектов</option>
-                  <option value="Электрика">Электрика</option>
-                  <option value="Сантехника">Сантехника</option>
-                  <option value="Договор и сотрудничество">Договор и сотрудничество</option>
-                </select>
-              </div>
-              <div class="field-group">
-                <label for="message">Сообщение</label>
-                <textarea id="message" name="message" placeholder="Опишите ваш вопрос или задачу" required></textarea>
-              </div>
-              <button class="btn btn-primary" type="submit">Отправить сообщение</button>
-              <p id="formStatus" class="form-status" aria-live="polite"></p>
-            </form>
+          <div class="field-group">
+            <label for="phone">Телефон</label>
+            <input id="phone" name="phone" type="tel" placeholder="+7 (___) ___-__-__" required />
           </div>
-        </div>
-      </section>
 
-      <section class="section">
-        <div class="container">
-          <div id="map" class="map-block" aria-label="Карта объектов"></div>
-        </div>
+          <div class="field-group">
+            <label for="email">E-mail</label>
+            <input id="email" name="email" type="email" placeholder="example@mail.ru" required />
+          </div>
+
+          <div class="field-group">
+            <label for="subject">Тема обращения</label>
+            <select id="subject" name="subject">
+              <option>Общий вопрос</option>
+              <option>Управление МКД</option>
+              <option>Эксплуатация объектов</option>
+              <option>Электрика</option>
+              <option>Сантехника</option>
+              <option>Договор и сотрудничество</option>
+            </select>
+          </div>
+
+          <div class="field-group">
+            <label for="message">Сообщение</label>
+            <textarea id="message" name="message" placeholder="Опишите ваш вопрос или задачу" required></textarea>
+          </div>
+
+          <label class="policy-field" for="policy">
+            <input type="checkbox" required checked id="policy" name="policy" />
+            <span>Даю согласие на обработку персональных данных в соответствии с 152-ФЗ</span>
+          </label>
+
+          <button type="submit" class="submit-btn">Отправить</button>
+          <p id="formStatus" class="form-status" aria-live="polite"></p>
+        </form>
       </section>
     </main>
 
@@ -116,14 +110,9 @@
           <strong>ООО «Константа»</strong>
           <p>Управляющая компания</p>
         </div>
-        <div>
-          <p>Телефон: +7 (495) 000-00-00</p>
-          <p>E-mail: info@konstanta.ru</p>
-        </div>
       </div>
     </footer>
 
-    <script src="static-content.js"></script>
     <script src="main.js"></script>
   </body>
 </html>
